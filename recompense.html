@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolunteerHub - Recompense și Insigne</title>
+
+    <!-- Fonturi: Montserrat și Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS & Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Fișierul tău CSS extern -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ZONA HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="bi bi-heart-pulse-fill me-2"></i>VolunteerHub
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Deschide meniul">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Acasă</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalog.html">Catalog</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="recompense.html">Recompense</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="despre.html">Despre noi</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex">
+                        <a href="profil.html" class="btn btn-accent">Autentificare / Contul meu</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ZONA PRINCIPALĂ -->
+    <main class="container my-4 my-md-5">
+
+        <h1 class="section-title mb-4">Recompense și Insigne</h1>
+
+        <!-- Card Progres XP & Nivel -->
+        <section class="profile-card p-4 p-md-5 mb-5">
+            <div class="row align-items-center gy-3">
+                <div class="col-12 col-md-8">
+                    <span class="badge badge-category mb-2" id="rewardLevelBadge">Nivel 1 &bull; Începător</span>
+                    <h2 class="h4 section-title mb-2">Progresul tău de voluntar</h2>
+                    <p class="text-muted small mb-3">
+                        Fiecare înscriere la o cauză îți aduce <strong>+50 XP</strong>. Strânge puncte pentru a debloca insigne și recompense din partea partenerilor noștri.
+                    </p>
+                    <div class="progress custom-progress mb-2" role="progressbar" aria-label="Progres XP" aria-valuemin="0" aria-valuemax="100">
+                        <div id="xpProgressBar" class="progress-bar" style="width: 0%"></div>
+                    </div>
+                    <div class="d-flex justify-content-between small text-muted">
+                        <span id="currentXPText">0 XP acumulați</span>
+                        <span id="nextLevelText">Următorul nivel: 100 XP</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <div class="xp-highlight p-3 d-inline-block text-center">
+                        <i class="bi bi-stars fs-2 d-block mb-1"></i>
+                        <span class="fs-3 fw-bold d-block" id="availableXP">0 XP</span>
+                        <span class="small text-muted">Puncte disponibile</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea: Insigne -->
+        <section class="mb-5">
+            <h2 class="h4 section-title mb-4">Insignele tale</h2>
+            <div class="row g-4" id="badgesGrid">
+                <!-- Insigna 1 -->
+                <div class="col-6 col-md-3">
+                    <div class="badge-card p-3 text-center h-100" data-req-events="1">
+                        <div class="badge-icon-wrap mx-auto mb-3">
+                            <i class="bi bi-flag-fill"></i>
+                        </div>
+                        <h3 class="h6 mb-1">Primul Pas</h3>
+                        <p class="small text-muted mb-2">Înscrie-te la primul tău eveniment.</p>
+                        <span class="badge status-badge">Blocat</span>
+                    </div>
+                </div>
+
+                <!-- Insigna 2 -->
+                <div class="col-6 col-md-3">
+                    <div class="badge-card p-3 text-center h-100" data-req-events="2">
+                        <div class="badge-icon-wrap mx-auto mb-3">
+                            <i class="bi bi-tree-fill"></i>
+                        </div>
+                        <h3 class="h6 mb-1">Sprijin Comunitar</h3>
+                        <p class="small text-muted mb-2">Participă la 2 acțiuni de voluntariat.</p>
+                        <span class="badge status-badge">Blocat</span>
+                    </div>
+                </div>
+
+                <!-- Insigna 3 -->
+                <div class="col-6 col-md-3">
+                    <div class="badge-card p-3 text-center h-100" data-req-events="4">
+                        <div class="badge-icon-wrap mx-auto mb-3">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                        <h3 class="h6 mb-1">Voluntar Dedicat</h3>
+                        <p class="small text-muted mb-2">Participă la 4 acțiuni de voluntariat.</p>
+                        <span class="badge status-badge">Blocat</span>
+                    </div>
+                </div>
+
+                <!-- Insigna 4 -->
+                <div class="col-6 col-md-3">
+                    <div class="badge-card p-3 text-center h-100" data-req-events="6">
+                        <div class="badge-icon-wrap mx-auto mb-3">
+                            <i class="bi bi-trophy-fill"></i>
+                        </div>
+                        <h3 class="h6 mb-1">Ambasador</h3>
+                        <p class="small text-muted mb-2">Participă la 6 acțiuni de voluntariat.</p>
+                        <span class="badge status-badge">Blocat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea: Recompense de revendicat -->
+        <section>
+            <h2 class="h4 section-title mb-4">Recompense disponibile</h2>
+
+            <div id="rewardAlert" class="alert d-none mb-4" role="alert"></div>
+
+            <div class="row g-4">
+                <!-- Recompensa 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="profile-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge badge-category">50 XP</span>
+                            <i class="bi bi-cup-hot-fill fs-3 reward-icon"></i>
+                        </div>
+                        <h3 class="h5 mb-2">Voucher Cafea Parteneră</h3>
+                        <p class="small text-muted mb-4">O cafea sau un ceai gratuit la cafenelele locale partenere din Timișoara și Reșița.</p>
+                        <button type="button" class="btn btn-outline-primary-custom btn-sm mt-auto claim-reward-btn" data-id="cafea" data-cost="50" data-name="Voucher Cafea Parteneră">
+                            Revendică (50 XP)
+                        </button>
+                    </article>
+                </div>
+
+                <!-- Recompensa 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="profile-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge badge-category">100 XP</span>
+                            <i class="bi bi-file-earmark-check-fill fs-3 reward-icon"></i>
+                        </div>
+                        <h3 class="h5 mb-2">Certificat Oficial de Voluntariat</h3>
+                        <p class="small text-muted mb-4">Adeverință digitală semnată pentru CV, portofoliu universitar sau practică.</p>
+                        <button type="button" class="btn btn-outline-primary-custom btn-sm mt-auto claim-reward-btn" data-id="certificat" data-cost="100" data-name="Certificat Oficial de Voluntariat">
+                            Revendică (100 XP)
+                        </button>
+                    </article>
+                </div>
+
+                <!-- Recompensa 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="profile-card p-4 h-100 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge badge-category">150 XP</span>
+                            <i class="bi bi-bag-heart-fill fs-3 reward-icon"></i>
+                        </div>
+                        <h3 class="h5 mb-2">Kit Eco VolunteerHub</h3>
+                        <p class="small text-muted mb-4">Sacoșă din bumbac reciclabil, sticlă reutilizabilă și tricou oficial VolunteerHub.</p>
+                        <button type="button" class="btn btn-outline-primary-custom btn-sm mt-auto claim-reward-btn" data-id="kiteco" data-cost="150" data-name="Kit Eco VolunteerHub">
+                            Revendică (150 XP)
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ZONA FOOTER -->
+    <footer class="custom-footer py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start gy-3">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0 small">&copy; 2026 VolunteerHub. Toate drepturile rezervate.</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="#" class="social-icon me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-icon me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scriptul tău extern -->
+    <script src="script.js"></script>
+</body>
+</html>

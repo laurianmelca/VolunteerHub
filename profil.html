@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolunteerHub - Profilul meu</title>
+
+    <!-- Fonturi: Montserrat și Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS & Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Fișierul tău CSS extern -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ZONA HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="bi bi-heart-pulse-fill me-2"></i>VolunteerHub
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Deschide meniul">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Acasă</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalog.html">Catalog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recompense.html">Recompense</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="despre.html">Despre noi</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex">
+                        <a href="profil.html" class="btn btn-accent">Autentificare / Contul meu</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ZONA PRINCIPALĂ -->
+    <main class="container my-4 my-md-5">
+
+        <!-- ==========================================
+             SECȚIUNEA 1: AUTENTIFICARE / CREARE CONT
+             ========================================== -->
+        <section id="authSection" class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="profile-card p-4 p-md-5">
+                    <h1 class="section-title h3 text-center mb-4">Contul tău VolunteerHub</h1>
+
+                    <!-- Tab-uri Autentificare / Creează cont -->
+                    <ul class="nav nav-pills nav-fill mb-4" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#loginPane" type="button" role="tab">Autentificare</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#registerPane" type="button" role="tab">Creează cont</button>
+                        </li>
+                    </ul>
+
+                    <!-- Mesaj de eroare / succes -->
+                    <div id="authAlert" class="alert d-none" role="alert"></div>
+
+                    <div class="tab-content">
+                        <!-- Formular Autentificare -->
+                        <div class="tab-pane fade show active" id="loginPane" role="tabpanel">
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email</label>
+                                    <input type="email" id="loginEmail" class="form-control" placeholder="exemplu@email.com" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="loginPassword" class="form-label">Parolă</label>
+                                    <input type="password" id="loginPassword" class="form-control" placeholder="Introdu parola" required>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-accent btn-lg">Intră în cont</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Formular Creare Cont -->
+                        <div class="tab-pane fade" id="registerPane" role="tabpanel">
+                            <form id="registerForm">
+                                <div class="mb-3">
+                                    <label for="regName" class="form-label">Nume complet</label>
+                                    <input type="text" id="regName" class="form-control" placeholder="Ex: Popescu Andrei" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="regEmail" class="form-label">Email</label>
+                                    <input type="email" id="regEmail" class="form-control" placeholder="exemplu@email.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="regCity" class="form-label">Oraș</label>
+                                    <input type="text" id="regCity" class="form-control" placeholder="Ex: Timișoara" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="regBio" class="form-label">Despre tine (opțional)</label>
+                                    <input type="text" id="regBio" class="form-control" placeholder="Ex: Pasionat de ecologizare și educație">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="regPassword" class="form-label">Parolă</label>
+                                    <input type="password" id="regPassword" class="form-control" placeholder="Minim 4 caractere" minlength="4" required>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-accent btn-lg">Creează contul</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECȚIUNEA 2: PROFILUL VOLUNTARULUI
+             ========================================== -->
+        <div id="profileSection" class="d-none">
+            <!-- Card Profil Voluntar -->
+            <section class="profile-card p-4 p-md-5 mb-5">
+                <div class="row align-items-center gy-4">
+                    <div class="col-12 col-md-auto text-center">
+                        <img id="profileAvatar" src="https://api.dicebear.com/9.x/adventurer/svg?seed=Alex&backgroundColor=b6e3f4" alt="Avatar profil" width="100" height="100" class="avatar-circle avatar-img mx-auto d-block mb-2">
+                        <button type="button" class="btn btn-sm btn-link text-decoration-none p-0" data-bs-toggle="modal" data-bs-target="#avatarModal">
+                            <i class="bi bi-pencil-square me-1"></i>Schimbă avatar
+                        </button>
+                    </div>
+                    <div class="col-12 col-md text-center text-md-start">
+                        <span class="badge badge-category mb-2">Nivel 1 &bull; Voluntariat Activ</span>
+                        <h1 id="profileName" class="section-title h2 mb-1">Nume Voluntar</h1>
+                        <p class="cause-meta mb-2">
+                            <i class="bi bi-geo-alt me-1"></i><span id="profileCity">Oraș</span> &bull;
+                            <i class="bi bi-envelope me-1"></i><span id="profileEmail">email@exemplu.ro</span>
+                        </p>
+                        <p id="profileBio" class="mb-0 small"></p>
+                    </div>
+                    <div class="col-12 col-md-auto text-center text-md-end d-flex flex-column gap-2">
+                        <a href="recompense.html" class="btn btn-outline-primary-custom">
+                            <i class="bi bi-trophy me-1"></i>Vezi recompensele
+                        </a>
+                        <button type="button" id="logoutBtn" class="btn btn-outline-danger btn-sm">
+                            <i class="bi bi-box-arrow-right me-1"></i>Deconectare
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Statistici Voluntar -->
+                <div class="row g-3 mt-4 pt-4 border-top text-center">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box p-3">
+                            <span class="d-block fs-3 fw-bold stat-number" id="statHours">0</span>
+                            <span class="small text-muted">Ore estimate</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box p-3">
+                            <span class="d-block fs-3 fw-bold stat-number" id="statXP">0 XP</span>
+                            <span class="small text-muted">Puncte acumulate</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box p-3">
+                            <span class="d-block fs-3 fw-bold stat-number" id="activeEnrollCount">0</span>
+                            <span class="small text-muted">Înscrieri active</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box p-3">
+                            <span class="d-block fs-3 fw-bold stat-number">1</span>
+                            <span class="small text-muted">Insigne obținute</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Secțiunea: Evenimentele la care ești înscris -->
+            <section class="mb-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="h4 section-title mb-0">Evenimentele mele viitoare</h2>
+                    <a href="catalog.html" class="btn btn-sm btn-accent">+ Găsește cauze noi</a>
+                </div>
+
+                <div id="noEnrolledMsg" class="profile-card p-4 text-center">
+                    <i class="bi bi-calendar-x fs-2 text-muted d-block mb-2"></i>
+                    <p class="mb-3">Nu ești înscris la niciun eveniment momentan.</p>
+                    <a href="catalog.html" class="btn btn-outline-primary-custom btn-sm">Explorează Catalogul</a>
+                </div>
+
+                <div id="enrolledList" class="row g-3"></div>
+            </section>
+
+            <!-- Secțiunea: Istoric activități finalizate -->
+            <section>
+                <h2 class="h4 section-title mb-3">Istoric participări</h2>
+                <div class="profile-card p-3 p-md-4">
+                    <div class="table-responsive">
+                        <table class="table align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Eveniment</th>
+                                    <th>Domeniu</th>
+                                    <th>Data</th>
+                                    <th>Ore</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-medium">Plantare de primăvară - Parcul Rozelor</td>
+                                    <td><span class="badge badge-category">Mediu</span></td>
+                                    <td>12 Aprilie 2026</td>
+                                    <td>4 ore</td>
+                                    <td><span class="badge bg-success">Finalizat</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modal alegere avatar -->
+        <div class="modal fade" id="avatarModal" tabindex="-1" aria-labelledby="avatarModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header border-0 pb-0">
+                        <h2 class="modal-title fs-5" id="avatarModalLabel">Alege un avatar</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center gap-3 flex-wrap py-2" id="avatarPicker">
+                            <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Alex&backgroundColor=b6e3f4" alt="Avatar 1" width="64" height="64" class="avatar-option" data-bs-dismiss="modal">
+                            <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Maria&backgroundColor=ffd5dc" alt="Avatar 2" width="64" height="64" class="avatar-option" data-bs-dismiss="modal">
+                            <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Andrei&backgroundColor=c0aede" alt="Avatar 3" width="64" height="64" class="avatar-option" data-bs-dismiss="modal">
+                            <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Elena&backgroundColor=d1d4f9" alt="Avatar 4" width="64" height="64" class="avatar-option" data-bs-dismiss="modal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ZONA FOOTER -->
+    <footer class="custom-footer py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start gy-3">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0 small">&copy; 2026 VolunteerHub. Toate drepturile rezervate.</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="#" class="social-icon me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-icon me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scriptul tău extern -->
+    <script src="script.js"></script>
+</body>
+</html>

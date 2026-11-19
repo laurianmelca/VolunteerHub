@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolunteerHub - Acasă</title>
+
+    <!-- Fonturi: Montserrat și Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS & Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Fișierul tău CSS extern -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ZONA HEADER / MENIU DE NAVIGARE -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="bi bi-heart-pulse-fill me-2"></i>VolunteerHub
+                </a>
+
+                <!-- Buton meniu burger pentru telefon -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Deschide meniul">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Linkuri către toate paginile -->
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Acasă</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalog.html">Catalog</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="recompense.html">Recompense</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="despre.html">Despre noi</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex">
+                        <a href="profil.html" class="btn btn-accent">Autentificare / Contul meu</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ZONA PRINCIPALĂ -->
+    <main class="container my-4 my-md-5">
+
+       <!-- Secțiunea Hero (Imagine + Titlu + Buton) -->
+<section class="hero-section text-center mb-5">
+    <div class="hero-image-wrapper mb-4">
+        <img src="images/voluntari.jpg" alt="Grup de voluntari veseli ecologizând un spațiu verde" class="img-fluid hero-img">
+    </div>
+    <h1 class="hero-title mb-3">Găsește cauza potrivită ție!</h1>
+    <p class="hero-subtitle mb-4">Descoperă proiecte locale de voluntariat, cunoaște oameni implicați și adu o schimbare reală în comunitatea ta.</p>
+    <a href="catalog.html" class="btn btn-accent btn-lg px-4">Vezi opțiunile</a>
+</section>
+
+        <!-- Secțiunea Cauze Recomandate -->
+        <section class="recommended-section">
+            <h2 class="section-title mb-4">Cauze recomandate:</h2>
+
+            <div class="row g-4">
+                <!-- Cauza 1 -->
+                <div class="col-12 col-md-4">
+                    <article class="card cause-card h-100">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" class="card-img-top cause-img" alt="Plantare de copaci">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge badge-category align-self-start mb-2">Mediu</span>
+                            <h3 class="card-title h5">Plantare de copaci - Timișoara</h3>
+                            <p class="card-text">Alătură-te echipei ONG Verde pentru plantarea a 300 de puieți în zona Parcului Central.</p>
+                            <p class="cause-meta mt-auto mb-3"><i class="bi bi-calendar-event me-1"></i>24 Octombrie &bull; Parcul Central</p>
+                            <a href="detalii.html" class="btn btn-outline-primary-custom">Vezi detalii</a>
+                        </div>
+                    </article>
+                </div>
+
+                
+                <!-- Cauza 2 -->
+<div class="col-12 col-md-4">
+    <article class="card cause-card h-100">
+        <img src="images/raulbega.jpg" class="card-img-top cause-img" alt="Ecologizare malul Begăi">
+        <div class="card-body d-flex flex-column">
+            <span class="badge badge-category align-self-start mb-2">Ecologizare</span>
+            <h3 class="card-title h5">Ecologizare Malul Begăi</h3>
+            <p class="card-text">Curățăm împreună zona de promenadă și colectăm selectiv deșeurile alături de voluntari locali.</p>
+            <p class="cause-meta mt-auto mb-3"><i class="bi bi-calendar-event me-1"></i>2 Noiembrie &bull; Splaiul Tudor Vladimirescu</p>
+            <a href="detalii.html" class="btn btn-outline-primary-custom">Vezi detalii</a>
+        </div>
+    </article>
+</div>
+
+                <!-- Cauza 3 -->
+                <div class="col-12 col-md-4">
+                    <article class="card cause-card h-100">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=80" class="card-img-top cause-img" alt="Ajutor adăpost animale">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge badge-category align-self-start mb-2">Animale</span>
+                            <h3 class="card-title h5">Ajutor la Adăpostul de Animale</h3>
+                            <p class="card-text">Avem nevoie de sprijin pentru plimbarea câinilor, hrănire și organizarea spațiilor de joacă.</p>
+                            <p class="cause-meta mt-auto mb-3"><i class="bi bi-calendar-event me-1"></i>9 Noiembrie &bull; Adăpostul Speranța</p>
+                            <a href="detalii.html" class="btn btn-outline-primary-custom">Vezi detalii</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ZONA FOOTER -->
+    <footer class="custom-footer py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start gy-3">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0 small">&copy; 2026 VolunteerHub. Toate drepturile rezervate.</p>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <a href="#" class="social-icon me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-icon me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS (necesar pentru meniul burger pe telefon) -->
+    <!-- Bootstrap 5 JS (pentru meniul burger pe telefon) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scriptul tău extern -->
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
